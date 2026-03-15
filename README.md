@@ -29,9 +29,9 @@ flowchart LR
 A[📁 External Source<br>GitHub CSV Files]
 B[📦 Landing Volume]
 C[🟤 Bronze Layer<br>Raw Delta Tables]
-D[⚪ Silver Layer<br>Cleaned Delta Tables]
-E[🟡 Gold Layer<br>Business Data]
-F[📊 Dashboard / Analytics]
+D[⚪ Silver Layer<br>Cleaned Delta Tables](WIP)
+E[🟡 Gold Layer<br>Business Data](Planned)
+F[📊 Dashboard / Analytics](Planned)
 
 A --> B
 B --> C
