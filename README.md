@@ -1,37 +1,37 @@
-# Read CSV Data – Data Engineering Project
+# 📊 Read CSV Data – Data Engineering Project
 
-![Databricks](https://img.shields.io/badge/Platform-Databricks-red)
-![PySpark](https://img.shields.io/badge/Engine-PySpark-orange)
-![Delta Lake](https://img.shields.io/badge/Table-Delta%20Lake-blue)
-![Architecture](https://img.shields.io/badge/Architecture-Medallion-green)
+![Databricks](https://img.shields.io/badge/Platform-Databricks-red?style=for-the-badge&logo=databricks)
+![PySpark](https://img.shields.io/badge/Engine-PySpark-orange?style=for-the-badge&logo=apachespark)
+![Delta Lake](https://img.shields.io/badge/Table-Delta%20Lake-blue?style=for-the-badge)
+![Architecture](https://img.shields.io/badge/Architecture-Medallion-green?style=for-the-badge)
 
-This repository contains a **Data Engineering practice project** that demonstrates how to ingest and process CSV data from an external source using the **Medallion Architecture (Bronze → Silver → Gold)** on **Databricks**.
+🚀 This repository contains a **Data Engineering practice project** that demonstrates how to ingest and process **CSV data from an external source** using the **Medallion Architecture (Bronze → Silver → Gold)** on **Databricks**.
 
-The project simulates an external system using a **GitHub folder as the data source** and builds a pipeline to ingest, transform, and prepare data for analytics.
-
----
-
-# Architecture
-
-This project follows the **Medallion Architecture**, a widely used pattern in modern data engineering.
-
-**Bronze** → Raw data ingestion  
-**Silver** → Cleaned and standardized data  
-**Gold** → Business-ready datasets for analytics  
+The project simulates an **external system using a GitHub folder** and builds a pipeline to ingest, transform, and prepare data for analytics.
 
 ---
 
-## Medallion Architecture
+# 🏗️ Architecture
+
+This project follows the **Medallion Architecture**, a common pattern in modern data engineering.
+
+🟤 **Bronze** → Raw data ingestion  
+⚪ **Silver** → Cleaned and standardized data  
+🟡 **Gold** → Business-ready datasets for analytics  
+
+---
+
+## 🧭 Medallion Architecture Diagram
 
 ```mermaid
 flowchart LR
 
-A[External Source<br>GitHub CSV Files]
-B[Landing Volume]
-C[Bronze Layer<br>Raw Delta Tables]
-D[Silver Layer<br>Cleaned Delta Tables]
-E[Gold Layer<br>Business Data]
-F[Dashboard / Analytics]
+A[📁 External Source<br>GitHub CSV Files]
+B[📦 Landing Volume]
+C[🟤 Bronze Layer<br>Raw Delta Tables]
+D[⚪ Silver Layer<br>Cleaned Delta Tables]
+E[🟡 Gold Layer<br>Business Data]
+F[📊 Dashboard / Analytics]
 
 A --> B
 B --> C
@@ -42,39 +42,41 @@ E --> F
 
 ---
 
-# Data Pipeline Workflow
+# ⚙️ Data Pipeline Workflow
 
 ```mermaid
 flowchart TD
 
-A[External CSV Data] --> B[External Extract Notebook]
+A[📁 External CSV Data] --> B[📥 External Extract Notebook]
 
-B --> C[Landing Volume]
+B --> C[📦 Landing Volume]
 
-C --> D[Bronze Load Notebook]
-D --> E[Bronze Delta Tables]
+C --> D[🟤 Bronze Load Notebook]
+D --> E[🟤 Bronze Delta Tables]
 
-E --> F[Silver Transform Notebooks]
-F --> G[Silver Delta Tables]
+E --> F[⚪ Silver Transform Notebooks]
+F --> G[⚪ Silver Delta Tables]
 
-G --> H[Gold Transform Notebook]
-H --> I[Gold Tables]
+G --> H[🟡 Gold Transform Notebook]
+H --> I[🟡 Gold Tables]
 
-I --> J[Analytics / Dashboard]
+I --> J[📊 Analytics / Dashboard]
 ```
 
 ---
 
-# Technologies Used
+# 🧰 Technologies Used
 
-- Databricks Platform
-- Apache Spark / PySpark
-- Delta Lake
-- GitHub (simulated external data source)
+| Technology | Purpose |
+|------------|--------|
+| 🔴 Databricks | Data engineering platform |
+| 🟠 PySpark | Distributed data processing |
+| 🔵 Delta Lake | Lakehouse storage format |
+| ⚫ GitHub | External data source simulation |
 
 ---
 
-# Project Structure
+# 📁 Project Structure
 
 ```
 project
@@ -108,17 +110,17 @@ project
 │   │
 │   ├── 3_silver_script
 │   │   ├── silver_cust_info_transform.ipynb
-│   │   ├── silver_prd_info_transform.ipynb (WIP)
-│   │   ├── silver_sales_details_transform.ipynb (WIP)
-│   │   ├── silver_CUST_AZ12_transform.ipynb (WIP)
-│   │   ├── silver_LOC_A101_transform.ipynb (WIP)
-│   │   └── silver_PX_CAT_G1V2_transform.ipynb (WIP)
+│   │   ├── silver_prd_info_transform.ipynb (🚧 WIP)
+│   │   ├── silver_sales_details_transform.ipynb (🚧 WIP)
+│   │   ├── silver_CUST_AZ12_transform.ipynb (🚧 WIP)
+│   │   ├── silver_LOC_A101_transform.ipynb (🚧 WIP)
+│   │   └── silver_PX_CAT_G1V2_transform.ipynb (🚧 WIP)
 │   │
 │   ├── 4_gold_script
-│   │   └── gold_transform.ipynb (Planned)
+│   │   └── gold_transform.ipynb (📝 Planned)
 │   │
 │   └── etc
-│       └── drop_readcsvdata_project.ipynb (Planned)
+│       └── drop_readcsvdata_project.ipynb (📝 Planned)
 │
 ├── LICENSE
 └── README.md
@@ -126,100 +128,57 @@ project
 
 ---
 
-# Project Summary
+# 📌 Project Summary
 
-1. Create project environment  
-2. Extract data from external source  
-3. Load data into Bronze layer  
-4. Transform and clean data into Silver layer *(Work in progress)*  
-5. Build data pipeline *(Planned)*  
-6. Prepare data for analytics and dashboards *(Planned)*  
-
----
-
-# Project Details
-
-## 1. Environment Setup
-
-The project environment is created using a setup script.
-
-**Catalog**
-
-```
-readcsvdata
-```
-
-**Schemas**
-
-- bronze
-- silver
-- gold
-
-**Volumes**
-
-Landing volumes
-- landing_source_crm
-- landing_source_erp
-
-Processed volumes
-- process_source_crm
-- process_source_erp
+| Step | Description | Status |
+|-----|-------------|-------|
+| 1 | Create project environment | ✅ Completed |
+| 2 | Extract data from external source | ✅ Completed |
+| 3 | Load data into Bronze layer | ✅ Completed |
+| 4 | Transform data into Silver layer | 🚧 In Progress |
+| 5 | Build data pipeline | 📝 Planned |
+| 6 | Build analytics dashboard | 📝 Planned |
 
 ---
 
-## 2. Data Extraction
+# 🟤 Bronze Layer – Raw Data Ingestion
 
-Raw CSV data is ingested from the external source into the landing volumes.
+The Bronze layer stores **raw data exactly as received from the source**.
 
-### CRM Source Files
-
-- cust_info.csv  
-- prd_info.csv  
-- sales_details.csv  
-
-### ERP Source Files
-
-- CUST_AZ12.csv  
-- LOG_A101.csv  
-- PX_CAT_G1V2.csv  
-
----
-
-## 3. Bronze Layer – Raw Data Ingestion
-
-The Bronze layer stores raw data exactly as received from the source.
-
-Process:
+### Process
 
 - Read CSV files from landing volumes
-- Load data into Bronze Delta tables
+- Load data into **Bronze Delta tables**
 - Move processed files from landing folder to processed folder
 
-Purpose:
+### Purpose
 
-- Preserve raw data
-- Enable traceability and reprocessing
+✔ Preserve raw data  
+✔ Enable traceability  
+✔ Support reprocessing if needed  
 
 ---
 
-## 4. Silver Layer – Data Transformation *(Work in progress)*
+# ⚪ Silver Layer – Data Transformation
 
-The Silver layer contains cleaned and standardized data.
+*(Work in progress)*
 
-Transformation steps:
+The Silver layer contains **cleaned and standardized data**.
+
+### Transformation Steps
 
 - Remove leading and trailing spaces from string columns
 - Normalize specific column values
 - Rename columns using standardized naming conventions
 - Apply basic data quality validation
 
-The cleaned data is written into **Silver Delta tables**.
-
 ---
 
-## 5. Data Quality Checks *(Work in progress)*
+# 🔍 Data Quality Checks
 
-Basic validation ensures data integrity:
+*(Work in progress)*
+
+Validation checks include:
 
 - Trim validation for string columns
 - Column normalization validation
@@ -227,44 +186,40 @@ Basic validation ensures data integrity:
 
 ---
 
-## 6. Data Pipeline *(Planned)*
-
-A pipeline will orchestrate the ingestion and transformation processes.
+# 🔄 Data Pipeline (Planned)
 
 Pipeline stages:
 
-1. Extract data from external source  
-2. Load raw data to Bronze tables  
-3. Transform data into Silver tables  
-4. Perform data quality checks  
+1️⃣ Extract data from external source  
+2️⃣ Load raw data to Bronze tables  
+3️⃣ Transform data into Silver tables  
+4️⃣ Run data quality validation  
 
 ---
 
-# Future Improvements
+# 🚀 Future Improvements
 
-Planned enhancements:
-
-- Implement the **Gold layer** for business metrics
-- Add orchestration using **Databricks Workflows**
-- Introduce automated **data quality validation**
+- Implement **Gold layer analytics tables**
+- Add **Databricks Workflows orchestration**
+- Implement **automated data quality checks**
 - Add **monitoring and logging**
-- Build **Databricks dashboards** for analytics
+- Build **Databricks dashboards**
 
 ---
 
-# Purpose of This Project
+# 🎯 Purpose of This Project
 
-This project is designed as a **hands-on practice for core Data Engineering concepts**, including:
+This project is designed to practice **core Data Engineering concepts**:
 
 - Data ingestion
-- Medallion architecture implementation
-- Data transformation using PySpark
-- Delta Lake data management
+- Medallion architecture
+- Data transformation with PySpark
+- Delta Lake management
 - Data pipeline design
 
 ---
 
-# Author
+# 👨‍💻 Author
 
-Kevin  
+**Kevin**  
 Data Engineering Practice Project
