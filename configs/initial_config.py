@@ -5,7 +5,7 @@ volume_setup = ["landing_source_crm", "landing_source_erp","process_source_crm",
 
 
 # github base url
-github_url = "https://raw.githubusercontent.com/sophonsim/readcsvdata/refs/heads/main/dataset/source"
+github_url = "https://raw.githubusercontent.com/sophonsim/readcsvdata/refs/heads/main/datasets/source"
 github_source = ["source_crm","source_erp"]
 target = f"/Volumes/{catalog_setup}/{schema_setup[0]}"
 processed = f"/Volumes/{catalog_setup}/{schema_setup[0]}"

@@ -2,8 +2,6 @@ layer = "bronze"
 path = f"/Volumes/readcsvdata"
 desination = ["landing_source_crm","landing_source_erp","process_source_crm","process_source_erp"]
 
-
-
 BRONZE_CONFIG = [
     # source crm 
     {
