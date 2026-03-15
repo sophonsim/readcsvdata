@@ -54,13 +54,13 @@ B --> C[📦 Landing Volume]
 C --> D[🟤 Bronze Load Notebook]
 D --> E[🟤 Bronze Delta Tables]
 
-E --> F[⚪ Silver Transform Notebooks(WIP)]
-F --> G[⚪ Silver Delta Tables(WIP)]
+E --> F[⚪ Silver Transform Notebooks]
+F --> G[⚪ Silver Delta Tables]
 
-G --> H[🟡 Gold Transform Notebook(Planned)]
-H --> I[🟡 Gold Tables(Planned)]
+G --> H[🟡 Gold Transform Notebook]
+H --> I[🟡 Gold Tables]
 
-I --> J[📊 Analytics / Dashboard(Planned)]
+I --> J[📊 Analytics / Dashboard]
 ```
 
 ---
